@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.w-18{
+  width: 74px;
+}
+
+.max {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.calc-h{
+  height: calc(100vh - 80px);
+}
