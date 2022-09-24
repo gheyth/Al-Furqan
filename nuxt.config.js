@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'أحمد',
+    title: 'الفرقان',
     htmlAttrs: {
       lang: 'ar',
       dir: 'rtl'
@@ -15,13 +15,14 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
 
-      { name:'theme-color', content:'#94682A' },
+      { name: 'theme-color', content: '#94682A' },
       { name: 'msapplication-navbutton-color', content: '#94682A' },
-      { name:'apple-mobile-web-app-status-bar-style', content:'#94682A' }
+      { name: 'apple-mobile-web-app-status-bar-style', content: '#94682A' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel:'stylesheet', href:'https://cdn.jsdelivr.net/gh/sidraweb/flaticon-uicons@V1.0.0/uicons.css' }
+      { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/sidraweb/flaticon-uicons@V1.0.0/uicons.css' },
+      { href: "https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap", rel: "stylesheet"}
     ],
     script: [
       { src: 'https://kit.fontawesome.com/1a4bb73a43.js', crossorigin: 'anonymous' },
