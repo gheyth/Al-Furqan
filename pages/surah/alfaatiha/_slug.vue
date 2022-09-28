@@ -25,16 +25,14 @@ export default {
       let AyaArray = [];
       let aya = document.querySelectorAll(".box div p");
       let expl = document.querySelectorAll(".box-expl ul li")
+
       //aya aya
       let AyaAya = document.querySelector(".aya-aya")
 
-      AyaAya.style.opacity = "0.3"
-      AyaAya.addEventListener("click", () => {
-        console.log("fares")
-      })
+      
 
       for (var i = 0; i < aya.length; i++) {
-        const surah = {
+        const SurahData = {
           id: i,
           aya: aya[i].innerHTML,
           button: aya[i],
@@ -43,42 +41,89 @@ export default {
             button: expl[i]
           }
         };
-        AyaArray.push(surah);
+        AyaArray.push(SurahData);
       }
-      console.log(AyaArray)
+
+      //.box div p
+      function AyaEch(mode) {
+        aya.forEach(element => {
+          if (mode === true){ AyaStart() }
+          else { AyaClose() };
+
+          function AyaStart() {
+            element.style.backgroundColor = null;
+            element.style.opacity = "0.3";
+          };
+          function AyaClose() {
+            element.style.backgroundColor = null;
+            element.style.opacity = "1";
+          }
+        });
+      }
+      //.box-expl ul li
+      function ExplEch(mode) {
+        expl.forEach(element => {
+          if (mode === true) { ExplStart() }
+          else {ExplClose()};
+          function ExplStart() {
+            element.style.backgroundColor = null;
+            element.style.opacity = "0.3";
+          };
+          function ExplClose() {
+            element.style.backgroundColor = null;
+            element.style.opacity = "1";
+          }
+        });
+      }
       AyaArray.forEach(element => {
         element.button.addEventListener("click", () => {
-              //.box div p
-              aya.forEach(element => {
-                  element.style.backgroundColor = null;
-                  element.style.opacity = "0.3";
-              });
-              //.box-expl ul li
-              expl.forEach(element => {
-                  element.style.backgroundColor = null;
-                  element.style.opacity = "0.3";
-                  element.removeAttribute("id")
-              });
-              ModeJsStart()
-          });
+          AyaEch(true)
+          ExplEch(true)
+          ModeAyaAya(true)
+        });
+        AyaAya.addEventListener("click", () => {
+          AyaEch(false)
+          ExplEch(false)
+          ModeAyaAya(false)
+        })
 
         //list function
-        function ModeJsStart() {
-          //ayat
-          element.button.style.backgroundColor = "#cca35a";
-          element.button.style.opacity = null;
-          //explain
-          element.explain.button.style.backgroundColor = "#cca35a";
-          element.explain.button.style.opacity = null;
-          element.explain.button.id = "loc"
+        function ModeAyaAya(mode) {
+          if (mode === true) { ModeStart() }
+          else { ModeClose() };
 
-          //to explain
+          function ModeStart() {
+            //ayat
+            element.button.style.backgroundColor = "#cca35a";
+            element.button.style.opacity = null;
+            //explain
+            element.explain.button.style.backgroundColor = "#cca35a";
+            element.explain.button.style.opacity = null;
 
-          //button aya-aya
-          AyaAya.style.opacity = "1"
+            //to explain
+            element.explain.button.scrollIntoView({
+              block: 'center',
+              inline: 'center'
+            })
+            //button aya-aya
+            AyaAya.classList.remove("opacity-30")
+            AyaAya.classList.add("opacity-100")
+          };
+          function ModeClose() {
+            //ayat
+            element.button.style.backgroundColor = null;
+            element.button.style.opacity = null;
+            //explain
+            element.explain.button.style.backgroundColor = null;
+            element.explain.button.style.opacity = null;
+
+            //button aya-aya
+            AyaAya.classList.remove("opacity-100")
+            AyaAya.classList.add("opacity-30")
+          }
         }
       });
-  },
+    },
   components: { SlugHeader }
 }
 </script>

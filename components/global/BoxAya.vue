@@ -6,8 +6,8 @@
       <slot></slot>
     </div>
     <div class="flex justify-end my-2 items-center mx-auto">
-        <div class="aya-aya cursor-pointer bg-white flex justify-center w-8 h-8 border border-basic-02 rounded-lg text-xl text-basic-02">
-          <i class="fi fi-rr-layout-fluid"></i>
+        <div class="aya-aya opacity-30 cursor-pointer bg-white flex justify-center w-8 h-8 border border-basic-02 rounded-lg text-xl text-basic-02">
+          <i class="fi fi-sr-cross-circle"></i>
         </div>
     </div>
   </div>
