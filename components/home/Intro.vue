@@ -1,5 +1,5 @@
 <template>
-  <section class="all-media calc w-full m-auto relative">
+  <section class="all-media calc w-full m-auto relative z-10">
     <video loop muted autoplay class="w-full vd calc">
       <source src="~assets/intro.mp4" type="video/mp4">
     </video>
