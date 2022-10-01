@@ -1,3 +1,17 @@
 <template>
-  <h1>surah</h1>
+  <Surah />
 </template>
+
+<script>
+import Surah from '~/components/blog/Surah.vue';
+export default {
+  components: { 
+    Surah 
+  },
+  head(){
+    return {
+      title: "قائمة السور"
+    }
+  }
+}
+</script>
