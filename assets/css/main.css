@@ -13,3 +13,6 @@
 .calc-h{
   height: calc(100vh - 80px);
 }
+.ltr{
+  direction: ltr;
+}

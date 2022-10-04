@@ -8,6 +8,11 @@ function PageSlug(){
   let CloseAyaAya = document.querySelector(".aya-aya")
 
   let PrintPage = document.querySelector(".print")
+  let PageJson = {
+    name:document.title,
+    ayat: aya.length,
+    content: []
+  }
   //loop for data
   for (var i = 0; i < aya.length; i++) {
     const SurahData = {
@@ -20,7 +25,17 @@ function PageSlug(){
       }
     };
     AyaArray.push(SurahData);
+
+    //for DEV
+    const DataJson = {
+      NumberAya: i + 1,
+      Aya: aya[i].innerHTML,
+      Explain: expl[i].innerText,
+    }
+    PageJson.content.push(DataJson)
   }
+  ////////////
+  console.log(PageJson)
   //.box div p
   function AyaEch(mode) {
     aya.forEach(element => {
