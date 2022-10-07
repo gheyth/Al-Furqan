@@ -28,10 +28,10 @@
       </div>
       <div class="z-30 cursor-pointer text-xl text-basic-02 flex items-center justify-between">
         <div class="mr-2 h-8 text-base text-basic-02 bg-white flex items-center justify-center rounded-lg border border-basic-02 px-2">
-          <p class="font-black">من {{start}}</p>
+          <p class="start font-black">من {{start}}</p>
         </div>
         <div class="mr-2 h-8 text-base text-basic-02 bg-white flex items-center justify-center rounded-lg border border-basic-02 px-2">
-          <p class="font-black">الى {{end}}</p>
+          <p class="end font-black">الى {{end}}</p>
         </div>
       </div>
     </div>
@@ -43,8 +43,8 @@ export default {
   props: {
     surah: String,
     ayat: String,
-    start: String,
-    end: String,
+    start: Number,
+    end: Number,
     revelation: String,
     link: String
   }
