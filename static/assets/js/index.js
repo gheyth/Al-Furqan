@@ -163,7 +163,7 @@ function PageSlug(){
         barWidth:2,
         barRadius:3
       });
-      wavesurfer.load(`/assets/quran/alfaatiha/${element.urlmp3}`);
+      wavesurfer.load(`assets/quran/alfaatiha/${element.urlmp3}`);
       
       //for show box audio
       audio.classList.remove("opacity-0")
