@@ -90,4 +90,4 @@ sw.*
 *.swp
 
 # for mp3
-/static/assets/quran
+# /static/assets/quran

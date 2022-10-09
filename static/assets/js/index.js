@@ -1,3 +1,6 @@
+
+let FromAya;
+
 function PageSlug(){
   let AyaArray = [];
   let aya = document.querySelectorAll(".box div p");
@@ -13,35 +16,39 @@ function PageSlug(){
     ayat: aya.length,
     content: []
   }
+
+  ////////////////////////// ******* //////////////////////////
   //loop for data
   for (var i = 0; i < aya.length; i++) {
-    const SurahData = {
-      id: i,
+    const DataAyat = {
+      id: FromAya + i,
       aya: aya[i].innerHTML,
       button: aya[i],
       explain: {
         expl: expl[i].innerText,
         button: expl[i]
-      }
+      },
+      urlmp3: i + 1 + ".mp3",
     };
-    AyaArray.push(SurahData);
+    AyaArray.push(DataAyat);
 
     //for DEV
     const DataJson = {
-      NumberAya: i + 1,
+      NumberAya:FromAya + i,
       Aya: aya[i].innerHTML,
       Explain: expl[i].innerText,
     }
     PageJson.content.push(DataJson)
   }
-  ////////////
-  console.log(PageJson)
-  //.box div p
+  // console.log(PageJson)
+  // console.log(AyaArray)
+
+
+  ////////////////////////// ******* //////////////////////////
+
+  //BOX AYAT - .box div p
   function AyaEch(mode) {
     aya.forEach(element => {
-      if (mode === true){ AyaStart() }
-      else { AyaClose() };
-
       function AyaStart() {
         element.style.backgroundColor = null;
         element.style.opacity = "0.3";
@@ -50,9 +57,11 @@ function PageSlug(){
         element.style.backgroundColor = null;
         element.style.opacity = "1";
       }
+      if (mode === true){ AyaStart() }
+      else { AyaClose() };
     });
   }
-  //.box-expl ul li
+  //BOX EXPLAIN - .box-expl ul li
   function ExplEch(mode) {
     expl.forEach(element => {
       function ExplStart() {
@@ -66,7 +75,7 @@ function PageSlug(){
       if (mode === true) { ExplStart() }
       else { ExplClose() };
     });
-  }
+  };
   //for copy text
   Copy.forEach(element => {
     element.addEventListener("click", () => {
@@ -80,6 +89,7 @@ function PageSlug(){
       });
     })
   });
+
   // ForEch AyaArray
   AyaArray.forEach(element => {
     //for start aya with explain
@@ -87,6 +97,7 @@ function PageSlug(){
       AyaEch(true)
       ExplEch(true)
       ModeAyaAya(true)
+      StartAndStopAudio()
     });
     //for stop aya with explain
     CloseAyaAya.addEventListener("click", () => {
@@ -131,9 +142,68 @@ function PageSlug(){
       }
       if (mode === true) { ModeStart() }
       else { ModeClose() };
+    };
+    
+    ////
+    function StartAndStopAudio() {
+      //box audio html
+      let audio = document.getElementById("audio");
+      //box mp3 wavesurfer
+      let BoxMp3 = document.getElementById("mp3");
+
+      //for clear box mp3 - for other mp3
+      BoxMp3.innerHTML = "";
+
+      // for mp3
+      var wavesurfer = WaveSurfer.create({
+        container: '#mp3',
+        waveColor: '#cca35a',
+        progressColor: '#94682A',
+        barHeight:2,
+        barWidth:2,
+        barRadius:3
+      });
+      wavesurfer.load(`/assets/quran/alfaatiha/${element.urlmp3}`);
+      
+      //for show box audio
+      audio.classList.remove("opacity-0")
+
+      //for start mp3
+      document.querySelector(".play").onclick = (e) => {
+        wavesurfer.playPause()
+      };
+      //click icon play
+      wavesurfer.on("play", () => {
+        document.querySelector(".fi-rr-play").classList.toggle("hidden");
+        document.querySelector(".fi-rr-pause").classList.toggle("hidden");
+      })
+      //click icon stop
+      wavesurfer.on("pause", () => {
+        document.querySelector(".fi-rr-play").classList.toggle("hidden");
+        document.querySelector(".fi-rr-pause").classList.toggle("hidden");
+      });
+      //for stop mp3 for other mp3
+      aya.forEach(element => {
+        element.addEventListener("click", () => {
+          wavesurfer.pause()
+        })
+      });
+      CloseAyaAya.addEventListener("click", () => {
+        wavesurfer.pause()
+        audio.classList.add("opacity-0")
+      });
+      //style
+      document.getElementsByTagName("wave")[0].style.display = "flex";
+      document.getElementsByTagName("wave")[0].style.height = "45px"
+      document.getElementsByTagName("wave")[1].style.borderRight = "none"
     }
   });
+
+  ///
   PrintPage.addEventListener("click", () => {
     window.print();
   });
+
+  
+  ////
 };
