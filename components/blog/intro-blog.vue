@@ -23,6 +23,8 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 25vh;
+    background-image: url('~assets/img/koran.jpg');
+
   }
   .text-border{
     text-shadow:

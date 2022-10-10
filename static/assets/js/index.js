@@ -1,4 +1,3 @@
-
 let FromAya;
 
 function PageSlug(){
@@ -10,7 +9,10 @@ function PageSlug(){
   //aya aya
   let CloseAyaAya = document.querySelector(".aya-aya")
 
+  //button print
   let PrintPage = document.querySelector(".print")
+
+  //data for dev
   let PageJson = {
     name:document.title,
     ayat: aya.length,
@@ -28,7 +30,7 @@ function PageSlug(){
         expl: expl[i].innerText,
         button: expl[i]
       },
-      urlmp3: i + 1 + ".mp3",
+      urlmp3:FromAya + i + ".mp3",
     };
     AyaArray.push(DataAyat);
 
@@ -41,7 +43,7 @@ function PageSlug(){
     PageJson.content.push(DataJson)
   }
   // console.log(PageJson)
-  // console.log(AyaArray)
+  console.log(AyaArray)
 
 
   ////////////////////////// ******* //////////////////////////
@@ -92,6 +94,7 @@ function PageSlug(){
 
   // ForEch AyaArray
   AyaArray.forEach(element => {
+
     //for start aya with explain
     element.button.addEventListener("click", () => {
       AyaEch(true)
@@ -99,6 +102,7 @@ function PageSlug(){
       ModeAyaAya(true)
       StartAndStopAudio()
     });
+
     //for stop aya with explain
     CloseAyaAya.addEventListener("click", () => {
       AyaEch(false)
@@ -144,7 +148,7 @@ function PageSlug(){
       else { ModeClose() };
     };
     
-    ////
+    //audio for ayat
     function StartAndStopAudio() {
       //box audio html
       let audio = document.getElementById("audio");
@@ -163,7 +167,7 @@ function PageSlug(){
         barWidth:2,
         barRadius:3
       });
-      wavesurfer.load(`assets/quran/alfaatiha/${element.urlmp3}`);
+      wavesurfer.load(`https://cors-anywhere.herokuapp.com/https://cdn.islamic.network/quran/audio/128/ar.alafasy/${element.urlmp3}`);
       
       //for show box audio
       audio.classList.remove("opacity-0")
@@ -199,7 +203,7 @@ function PageSlug(){
     }
   });
 
-  ///
+  //for print page
   PrintPage.addEventListener("click", () => {
     window.print();
   });
