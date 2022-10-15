@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url('/assets/fonts/samim/ArbFONTS-Samim-Bold.ttf');
+  src: url('~assets/fonts/samim/ArbFONTS-Samim-Bold.ttf');
 }
 
 @font-face {
@@ -12,7 +12,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url('/assets/fonts/samim/ArbFONTS-Samim-Medium.ttf');
+  src: url('~assets/fonts/samim/ArbFONTS-Samim-Medium.ttf');
 }
 
 @font-face {
@@ -20,7 +20,7 @@
   font-style: normal;
   font-weight: 200;
   font-display: swap;
-  src: url('/assets/fonts/samim/ArbFONTS-Samim.ttf');
+  src: url('~assets/fonts/samim/ArbFONTS-Samim.ttf');
 }
 
 * {

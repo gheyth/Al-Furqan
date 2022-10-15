@@ -1,5 +1,4 @@
 let FromAya;
-
 function PageSlug(){
   let AyaArray = [];
   let aya = document.querySelectorAll(".box div p");
@@ -167,7 +166,7 @@ function PageSlug(){
         barWidth:2,
         barRadius:3
       });
-      wavesurfer.load(`https://cors-anywhere.herokuapp.com/https://cdn.islamic.network/quran/audio/128/ar.alafasy/${element.urlmp3}`);
+      wavesurfer.load(`https://cdn.islamic.network/quran/audio/128/ar.alafasy/${element.urlmp3}`);
       
       //for show box audio
       audio.classList.remove("opacity-0")
