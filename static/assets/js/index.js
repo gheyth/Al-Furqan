@@ -166,7 +166,7 @@ function PageSlug(){
         barWidth:2,
         barRadius:3
       });
-      wavesurfer.load(`https://cdn.islamic.network/quran/audio/128/ar.alafasy/${element.urlmp3}`);
+      wavesurfer.load(`https://gheyth.github.io/ayatalfurqan/alfaatiha/${element.urlmp3}`);
       
       //for show box audio
       audio.classList.remove("opacity-0")
