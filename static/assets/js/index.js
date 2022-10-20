@@ -166,6 +166,7 @@ function PageSlug(){
         barWidth:2,
         barRadius:3
       });
+      //for list mp3 : https://gheyth.github.io/ayatalfurqan/
       wavesurfer.load(`https://gheyth.github.io/ayatalfurqan/${element.urlmp3}`);
       
       //for show box audio
@@ -207,6 +208,4 @@ function PageSlug(){
     window.print();
   });
 
-  
-  ////
 };
