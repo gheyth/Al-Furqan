@@ -42,7 +42,7 @@
 export default {
   props: {
     surah: String,
-    ayat: String,
+    ayat: Number,
     start: Number,
     end: Number,
     revelation: String,

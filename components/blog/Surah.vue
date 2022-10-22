@@ -3,6 +3,7 @@
     <div class="container mx-auto my-0">
       <div class="list-surah">
         <LinkSurah name="الفاتحة" link="/alfaatiha/" />
+        <LinkSurah name="البقرة" link="/albaqarah/" />
       </div>
     </div>
   </div>

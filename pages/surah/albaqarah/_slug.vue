@@ -25,7 +25,7 @@
 import SlugHeader from '~/components/blog/SlugHeader.vue';
 export default {
   async asyncData({ $content, params }) {
-    const info = await $content("alfaatiha", params.slug).fetch();
+    const info = await $content("albaqarah", params.slug).fetch();
     return { info };
   },
   head() {
