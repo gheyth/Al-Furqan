@@ -27,7 +27,7 @@ export default {
     script: [
       { src: 'https://kit.fontawesome.com/1a4bb73a43.js', crossorigin: 'anonymous' },
       { src: 'https://cdn.jsdelivr.net/npm/sweetalert2@11.4.29/dist/sweetalert2.all.min.js', async: true, defer: true },
-      { src: 'assets/js/index.js', async: true, defer: true },
+      { src: '/assets/js/index.js', async: true, defer: true },
       {src: 'https://unpkg.com/wavesurfer.js'}
     ]
   },

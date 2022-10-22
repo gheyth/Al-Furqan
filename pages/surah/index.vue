@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import Surah from '~/components/blog/Surah.vue';
+import Surah from '~/components/Surah.vue';
 import IntroBlog from '../../components/blog/intro-blog.vue';
 export default {
   components: {

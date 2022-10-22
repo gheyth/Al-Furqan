@@ -2,6 +2,7 @@
   <div>
     <div class="container mx-auto my-0">
       <div class="list-surah">
+        <!-- add new surah -->
         <LinkSurah name="الفاتحة" link="/alfaatiha/" />
         <LinkSurah name="البقرة" link="/albaqarah/" />
       </div>
@@ -10,7 +11,7 @@
 </template>
 
 <script>
-import LinkSurah from './LinkSurah.vue';
+import LinkSurah from './blog/LinkSurah.vue';
 export default {
     components: { LinkSurah }
 }
