@@ -4,7 +4,7 @@
       <div class="">
         <NuxtLink to="/"><img class="w-14" src="../assets/img/logo-navbar.png"></NuxtLink>
       </div>
-      <NuxtLink to="#" class="w-6 h-6 cursor-pointer">
+      <NuxtLink to="https://gheyth.github.io/about" class="w-6 h-6 cursor-pointer">
         <i class="fi fi-rs-info text-2xl text-basic-02 w-6 h-6"></i>
       </NuxtLink>
     </div>
