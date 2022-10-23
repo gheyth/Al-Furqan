@@ -1,6 +1,7 @@
 ---
 surah: 
 dir: 
+startaudio: 
 start: 
 end: 
 ayat: 
@@ -28,11 +29,13 @@ revelation:
 <BoxExpl>
 
 
+
 </BoxExpl>
 
 # معاني الكلمات
 
 <Box>
+
 
 
 </Box>
