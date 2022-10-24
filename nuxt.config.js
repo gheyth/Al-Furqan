@@ -1,7 +1,9 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
+  router: {
+    base: '/al-furqan/'
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'الفرقان',
@@ -20,14 +22,14 @@ export default {
       { name: 'apple-mobile-web-app-status-bar-style', content: '#94682A' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/alfurqan/assets/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/sidraweb/flaticon-uicons@V1.0.0/uicons.css' },
       { href: "https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap", rel: "stylesheet"}
     ],
     script: [
       { src: 'https://kit.fontawesome.com/1a4bb73a43.js', crossorigin: 'anonymous' },
       { src: 'https://cdn.jsdelivr.net/npm/sweetalert2@11.4.29/dist/sweetalert2.all.min.js', async: true, defer: true },
-      { src: '/alfurqan/assets/js/index.js', async: true, defer: true },
+      { src: '/assets/js/index.js', async: true, defer: true },
       { src: 'https://unpkg.com/wavesurfer.js'}
     ]
   },
