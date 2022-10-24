@@ -1,3 +1,5 @@
+console.log("START /assets/js/index.js")
+
 let FromAya;
 function PageSlug(){
   let AyaArray = [];
