@@ -34,6 +34,7 @@ export default {
   mounted() {
     setTimeout(() => {
       FromAya = this.info.startaudio;
+      NumberAyah = this.info.start;
       PageSlug()
       console.log("START JavaScript")
     }, 2000);

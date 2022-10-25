@@ -1,21 +1,23 @@
 console.log("START /assets/js/index.js")
 
 let FromAya;
+let NumberAyah;
+
 function PageSlug(){
   let AyaArray = [];
   let aya = document.querySelectorAll(".box div p");
   let expl = document.querySelectorAll(".box-expl ul li")
+  let en = document.querySelectorAll(".boxen p")
   let Copy = document.querySelectorAll(".fi-br-copy");
   let copyright = "[تم نسخ هذا النص من مشروع الفرقان - حاضنة غيث: https://gheyth.github.io/]";
   //aya aya
   let CloseAyaAya = document.querySelector(".aya-aya")
-
   //button print
   let PrintPage = document.querySelector(".print")
 
   //data for dev
   let PageJson = {
-    name:document.title,
+    NameGroup:document.title,
     ayat: aya.length,
     content: []
   }
@@ -24,7 +26,7 @@ function PageSlug(){
   //loop for data
   for (var i = 0; i < aya.length; i++) {
     const DataAyat = {
-      id: FromAya + i,
+      id:NumberAyah + i,
       aya: aya[i].innerHTML,
       button: aya[i],
       explain: {
@@ -37,13 +39,14 @@ function PageSlug(){
 
     //for DEV
     const DataJson = {
-      NumberAya:FromAya + i,
+      NumberAyah:NumberAyah + i,
       Aya: aya[i].innerHTML,
       Explain: expl[i].innerText,
+      English: en[i].innerHTML,
     }
     PageJson.content.push(DataJson)
   }
-  // console.log(PageJson)
+  console.log(PageJson)
   // console.log(AyaArray)
 
 
