@@ -44,7 +44,7 @@ function PageSlug(){
     PageJson.content.push(DataJson)
   }
   // console.log(PageJson)
-  console.log(AyaArray)
+  // console.log(AyaArray)
 
 
   ////////////////////////// ******* //////////////////////////
