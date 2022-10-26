@@ -32,7 +32,7 @@ export default {
     const info = await $content("albaqarah", params.slug).fetch();
     const [prev, next] = await $content('albaqarah')
       .only(['title', 'slug'])
-      .sortBy('createdAt', 'asc')
+      .sortBy('asc')
       .surround(params.slug)
       .fetch()
     return { info, prev, next };
