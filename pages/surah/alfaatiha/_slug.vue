@@ -29,7 +29,7 @@ export default {
     return { info };
   },
   head() {
-      return { title: this.info.surah };
+      return { title: `${this.info.surah} [${this.info.start} - ${this.info.end}]`};
   },
   mounted() {
     setTimeout(() => {
