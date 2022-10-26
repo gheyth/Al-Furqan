@@ -182,6 +182,12 @@ export default {
   },
 ```
 
+```
+<div class="prev-next flex w-4/5 mx-auto mt-0 justify-between">
+  <NuxtLink v-if="next" :to="{ name: 'surah-mynewsurah-slug', params: { slug: next.slug } }" class="bg-white border border-basic-02 rounded-md inline-block w-28 text-center py-1">التالي</NuxtLink>
+  <NuxtLink v-if="prev" :to="{ name: 'surah-mynewsurah-slug', params: { slug: prev.slug } }" class="bg-white border border-basic-02 rounded-md inline-block w-28 text-center py-1">السابق</NuxtLink>
+</div>
+```
 
 ## المرحلة الثانية
 ### اضافة رابط تنقل الى السورة الجديدة

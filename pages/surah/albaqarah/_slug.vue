@@ -9,6 +9,10 @@
       :link = " '/surah' + info.dir "
     />
     <nuxt-content :document="info" />
+    <div class="prev-next flex w-4/5 mx-auto mt-0 justify-between">
+      <NuxtLink v-if="next" :to="{ name: 'surah-albaqarah-slug', params: { slug: next.slug } }" class="bg-white border border-basic-02 rounded-md inline-block w-28 text-center py-1">التالي</NuxtLink>
+      <NuxtLink v-if="prev" :to="{ name: 'surah-albaqarah-slug', params: { slug: prev.slug } }" class="bg-white border border-basic-02 rounded-md inline-block w-28 text-center py-1">السابق</NuxtLink>
+    </div>
     <div id="audio" class="flex justify-center opacity-0">
       <div class="fixed bottom-0 flex bg-white rounded-xl w-11/12 mb-4 border border-basic-02 border-b-4">
         <div id="mp3" class="w-full py-1 px-1"></div>
@@ -26,8 +30,14 @@ import SlugHeader from '~/components/blog/SlugHeader.vue';
 export default {
   async asyncData({ $content, params }) {
     const info = await $content("albaqarah", params.slug).fetch();
-    return { info };
+    const [prev, next] = await $content('albaqarah')
+      .only(['title', 'slug'])
+      .sortBy('createdAt', 'asc')
+      .surround(params.slug)
+      .fetch()
+    return { info, prev, next };
   },
+  
   head() {
       return { title: `${this.info.surah} [${this.info.start} - ${this.info.end}]` };
   },
@@ -44,3 +54,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+  .prev-next{
+    direction: ltr;
+  }
+</style>
