@@ -136,6 +136,7 @@ async asyncData({ $content }) {
       :start=info.start
       :end=info.end
       :link = " '/surah' + info.dir "
+      :destination = "info.destination"
     />
     <nuxt-content :document="info" />
     <div id="audio" class="flex justify-center opacity-0">
@@ -245,6 +246,7 @@ start: البداية برقم الاية
 end: النهاية برقم الاية
 ayat: عدد ايات السورة
 revelation: مكان النزول
+destination: "مقصدالآيات"
 ---
 ```
 

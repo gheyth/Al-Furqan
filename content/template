@@ -6,6 +6,7 @@ start:
 end: 
 ayat: 
 revelation: 
+destination: ""
 ---
 <!-- (start + end) - startaudio + 1 -->
 

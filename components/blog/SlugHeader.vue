@@ -35,6 +35,11 @@
         </div>
       </div>
     </div>
+    <div class="w-4/5 my-0 mx-auto border border-basic-02 rounded-lg mt-2 px-3 py-2 text-basic-02 font-semibold bg-white">
+      <p>{{destination}}</p>
+      <hr class="border-basic-02 mt-2">
+      <a target="_blank" class="text-sky-600 mt-2 inline-block" href="https://e-quran.com/index.html">المصحف الإلكتروني</a>
+    </div>
   </section>
 </template>
 
@@ -46,7 +51,8 @@ export default {
     start: Number,
     end: Number,
     revelation: String,
-    link: String
+    link: String,
+    destination: String
   }
 }
 </script>
