@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-4">
     <div class="container mx-auto my-0">
       <div class="list-surah">
         <!-- add new surah -->

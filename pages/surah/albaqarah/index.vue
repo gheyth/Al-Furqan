@@ -80,6 +80,11 @@ import InfoSurah from '../../../components/blog/InfoSurah.vue';
             info
         };
     },
+    head(){
+      return{
+        title: "البقرة"
+      }
+    },
     components: { IntroBlog, InfoSurah }
 }
 </script>

@@ -72,6 +72,11 @@ import InfoSurah from '../../../components/blog/InfoSurah.vue';
             info
         };
     },
+    head(){
+      return{
+        title: "الفاتحة"
+      }
+    },
     components: { IntroBlog, InfoSurah }
 }
 </script>
