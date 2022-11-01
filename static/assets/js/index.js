@@ -146,7 +146,7 @@ function PageSlug(){
         CloseAyaAya.classList.add("opacity-30")
 
         //scrollTo
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // window.scrollTo({ top: 0, behavior: 'smooth' });
       }
       if (mode === true) { ModeStart() }
       else { ModeClose() };
