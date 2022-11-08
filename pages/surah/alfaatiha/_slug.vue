@@ -3,9 +3,9 @@
     <SlugHeader 
       :surah=info.surah
       :revelation=info.revelation
-      :ayat=info.ayat
-      :start=info.start
-      :end=info.end
+      :ayat=info.allayat
+      :start=info.startayat
+      :end=info.endayat
       :link = " '/surah' + info.dir "
       :destination = "info.destination"
     />
@@ -30,12 +30,12 @@ export default {
     return { info };
   },
   head() {
-      return { title: `${this.info.surah} [${this.info.start} - ${this.info.end}]`};
+      return { title: `${this.info.surah} [${this.info.startayat} - ${this.info.endayat}]`};
   },
   mounted() {
     setTimeout(() => {
       FromAya = this.info.startaudio;
-      NumberAyah = this.info.start;
+      NumberAyah = this.info.startayat;
       PageSlug()
       console.log("START JavaScript")
     }, 2000);
