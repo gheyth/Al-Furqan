@@ -24,7 +24,9 @@
         <div class="h-8 text-base text-basic-02 bg-white flex items-center justify-center rounded-lg border border-basic-02 px-2">
           <p class="font-black">آياتها {{ayat}}</p>
         </div>
-        
+        <div class="mr-2 h-8 text-base text-basic-02 bg-white flex items-center justify-center rounded-lg border border-basic-02 px-2 sm:hidden">
+          <p class="font-black">مجموعة {{group}}</p>
+        </div>
       </div>
       <div class="z-30 text-xl text-basic-02 flex items-center justify-between">
         <div class="mr-2 h-8 text-base text-basic-02 bg-white flex items-center justify-center rounded-lg border border-basic-02 px-2">
@@ -52,7 +54,8 @@ export default {
     end: Number,
     revelation: String,
     link: String,
-    destination: String
+    destination: String,
+    group: Number
   }
 }
 </script>

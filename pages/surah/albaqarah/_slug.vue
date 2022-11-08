@@ -8,6 +8,7 @@
       :end=info.endayat
       :link = " '/surah' + info.dir "
       :destination = "info.destination"
+      :group = "info.group"
     />
     <nuxt-content :document="info" />
     <div class="w-4/5 mx-auto mt-0 h-9">

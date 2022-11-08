@@ -14,6 +14,9 @@ module.exports = {
         'basic-01': '#cca35a',
       },
     },
+    screens:{
+      'sm': {'max': '389px'},
+    }
   },
   plugins: [],
 }

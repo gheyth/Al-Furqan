@@ -8,6 +8,7 @@
       :end=info.endayat
       :link = " '/surah' + info.dir "
       :destination = "info.destination"
+      :group = "info.group"
     />
     <nuxt-content :document="info" />
     <div id="audio" class="flex justify-center opacity-0">
