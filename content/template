@@ -1,14 +1,12 @@
 ---
 surah: 
-dir: 
 startaudio: 
-start: 
-end: 
-ayat: 
+startayat: 
+endayat: 
+allayat: 
 revelation: 
 destination: ""
 ---
-<!-- (start + end) - startaudio + 1 -->
 
 # الآيات
 

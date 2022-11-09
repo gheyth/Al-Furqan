@@ -89,5 +89,7 @@ sw.*
 # Vim swap files
 *.swp
 
+.vscode
+
 # for mp3
 # /static/assets/quran

@@ -5,7 +5,7 @@
       info="فَإِذَا قَرَأْتَ الْقُرْآنَ فَاسْتَعِذْ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ  (98) (النحل)"
     />
     
-    <div class="container mx-auto my-0 py-11">
+    <div class="w-3/4 mx-auto my-0 py-11">
       <h1 class="text-center text-basic-02 text-5xl font-black">المحتوى</h1>
 
       <div class="flex justify-end items-center w-4/5 my-0 mt-5 mx-auto">
