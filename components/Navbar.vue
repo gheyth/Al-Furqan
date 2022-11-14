@@ -15,7 +15,6 @@
           <div class="flex justify-center items-center">
             <img class="w-6" src="~/assets/img/icon.png">
           </div>
-          <!-- <p class="text-center text-sm mt-1">حاضنة غيث</p> -->
         </div>
       </a>
 
@@ -28,7 +27,16 @@
         </div>
       </NuxtLink>
       
-      <NuxtLink @click.native="OpenAndCloseMenu" to="/surah/" class="flex justify-center items-center w-20 h-20 text-basic-02 transition-all p-1 hover:border hover:border-basic-02 hover:rounded-md">
+      <NuxtLink @click.native="OpenAndCloseMenu" to="/quran/" class="flex justify-center items-center w-20 h-20 text-basic-02 transition-all p-1 hover:border hover:border-basic-02 hover:rounded-md">
+        <div>
+          <div class="flex justify-center items-center">
+            <i class="text-center w-6 h-6 text-2xl fi fi-sr-book"></i>
+          </div>
+          <p class="text-center text-sm mt-1">حول القرآن</p>
+        </div>
+      </NuxtLink>
+
+      <NuxtLink @click.native="OpenAndCloseMenu" to="/surah/" class="mt-1 mb-1 flex justify-center items-center w-20 h-20 text-basic-02 transition-all p-1 hover:border hover:border-basic-02 hover:rounded-md">
         <div>
           <div class="flex justify-center items-center">
             <i class="text-center w-6 h-6 text-2xl fi fi-ss-e-learning"></i>
@@ -36,8 +44,17 @@
           <p class="text-center text-sm mt-1">قائمة السور</p>
         </div>
       </NuxtLink>
+      
+      <NuxtLink @click.native="OpenAndCloseMenu" to="/save/" class="mt-1 mb-1 flex justify-center items-center w-20 h-20 text-basic-02 transition-all p-1 hover:border hover:border-basic-02 hover:rounded-md">
+        <div>
+          <div class="flex justify-center items-center">
+            <i class="text-center w-6 h-6 text-2xl fi fi-sr-comment-heart"></i>
+          </div>
+          <p class="text-center text-sm mt-1">المفضلة</p>
+        </div>
+      </NuxtLink>
 
-      <NuxtLink @click.native="OpenAndCloseMenu" to="#" class="mt-1 mb-1 flex justify-center items-center w-20 h-20 text-basic-02 transition-all p-1 hover:border hover:border-basic-02 hover:rounded-md">
+      <NuxtLink @click.native="OpenAndCloseMenu" to="/docs/" class="mt-1 mb-1 flex justify-center items-center w-20 h-20 text-basic-02 transition-all p-1 hover:border hover:border-basic-02 hover:rounded-md">
         <div>
           <div class="flex justify-center items-center">
             <i class="text-center w-6 h-6 text-2xl fi fi-sr-comments-question"></i>
@@ -46,16 +63,7 @@
         </div>
       </NuxtLink>
 
-      <NuxtLink @click.native="OpenAndCloseMenu" to="#" class="mt-1 mb-1 flex justify-center items-center w-20 h-20 text-basic-02 transition-all p-1 hover:border hover:border-basic-02 hover:rounded-md">
-        <div>
-          <div class="flex justify-center items-center">
-            <i class="text-center w-6 h-6 text-2xl fi fi-sr-interrogation"></i>
-          </div>
-          <p class="text-center text-sm mt-1">حول القرآن</p>
-        </div>
-      </NuxtLink>
-
-      <NuxtLink @click.native="OpenAndCloseMenu" to="#" class="mt-1 mb-1 flex justify-center items-center w-20 h-20 text-basic-02 transition-all p-1 hover:border hover:border-basic-02 hover:rounded-md">
+      <NuxtLink @click.native="OpenAndCloseMenu" to="/oldversion/" class="flex justify-center items-center w-20 h-20 text-basic-02 transition-all p-1 hover:border hover:border-basic-02 hover:rounded-md">
         <div>
           <div class="flex justify-center items-center">
             <i class="text-center w-6 h-6 text-2xl fi fi-ss-test-tube"></i>
@@ -64,12 +72,12 @@
         </div>
       </NuxtLink>
 
-      <NuxtLink @click.native="OpenAndCloseMenu" to="#" class="flex justify-center items-center w-20 h-20 text-basic-02 transition-all p-1 hover:border hover:border-basic-02 hover:rounded-md">
+      <NuxtLink @click.native="OpenAndCloseMenu" to="/about/" class="flex justify-center items-center w-20 h-20 text-basic-02 transition-all p-1 hover:border hover:border-basic-02 hover:rounded-md">
         <div>
           <div class="flex justify-center items-center">
-            <i class="text-center w-6 h-6 text-2xl fi fi-sr-comment-heart"></i>
+            <i class="text-center w-6 h-6 text-2xl fi fi-sr-info"></i>
           </div>
-          <p class="text-center text-sm mt-1">المفضلة</p>
+          <p class="text-center text-sm mt-1">عن الفرقان</p>
         </div>
       </NuxtLink>
 
@@ -81,15 +89,6 @@
           <p class="text-center text-sm mt-1">تابع و إتصل</p>
         </div>
       </a>
-
-      <NuxtLink @click.native="OpenAndCloseMenu" to="#" class="flex justify-center items-center w-20 h-20 text-basic-02 transition-all p-1 hover:border hover:border-basic-02 hover:rounded-md">
-        <div>
-          <div class="flex justify-center items-center">
-            <i class="text-center w-6 h-6 text-2xl fi fi-sr-info"></i>
-          </div>
-          <p class="text-center text-sm mt-1">عن الفرقان</p>
-        </div>
-      </NuxtLink>
     </div>
   </header>
 </template>

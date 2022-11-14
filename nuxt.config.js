@@ -23,7 +23,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' },
-      // { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/esaturn/flaticon-uicons@V2.0.0/uicons.css' },
+      { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/esaturn/flaticon-uicons@V2.1.1/uicons.css' },
       { href: "https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap", rel: "stylesheet"}
     ],
     script: [
