@@ -63,15 +63,6 @@
         </div>
       </NuxtLink>
 
-      <NuxtLink @click.native="OpenAndCloseMenu" to="/oldversion/" class="flex justify-center items-center w-20 h-20 text-basic-02 transition-all p-1 hover:border hover:border-basic-02 hover:rounded-md">
-        <div>
-          <div class="flex justify-center items-center">
-            <i class="text-center w-6 h-6 text-2xl fi fi-ss-test-tube"></i>
-          </div>
-          <p class="text-center text-sm mt-1">الإصدارات</p>
-        </div>
-      </NuxtLink>
-
       <NuxtLink @click.native="OpenAndCloseMenu" to="/about/" class="flex justify-center items-center w-20 h-20 text-basic-02 transition-all p-1 hover:border hover:border-basic-02 hover:rounded-md">
         <div>
           <div class="flex justify-center items-center">
@@ -80,6 +71,16 @@
           <p class="text-center text-sm mt-1">عن الفرقان</p>
         </div>
       </NuxtLink>
+
+      <a target="_blank" @click.native="OpenAndCloseMenu" href="https://github.com/gheyth/al-furqan"
+        class="flex justify-center items-center w-20 h-20 text-basic-02 transition-all p-1 hover:border hover:border-basic-02 hover:rounded-md">
+        <div>
+          <div class="flex justify-center items-center">
+            <i class="text-center w-6 h-6 text-2xl fi fi-brands-github"></i>
+          </div>
+          <p class="text-center text-sm mt-1">للمطورين</p>
+        </div>
+      </a>
 
       <a target="_blank" @click.native="OpenAndCloseMenu" href="https://twitter.com/_frs99" class="flex justify-center items-center w-20 h-20 text-basic-02 transition-all p-1 hover:border hover:border-basic-02 hover:rounded-md">
         <div>
