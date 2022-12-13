@@ -10,7 +10,7 @@
     </div>
     <div ref="menu" class="p-3 w-72 z-10 absolute left-7 top-16 border-2 border-basic-02 bg-white rounded-lg flex justify-between flex-wrap items-center opacity-0 pointer-events-none">
       
-      <a target="_blank" @click.native="OpenAndCloseMenu" href="https://gheyth.github.io/" class="flex justify-center items-center w-20 h-20 text-basic-02 transition-all p-1 hover:border hover:border-basic-02 hover:rounded-md">
+      <a target="_blank" href="https://gheyth.github.io/" class="flex justify-center items-center w-20 h-20 text-basic-02 transition-all p-1 hover:border hover:border-basic-02 hover:rounded-md">
         <div>
           <div class="flex justify-center items-center">
             <img class="w-6" src="~/assets/img/icon.png">
@@ -72,7 +72,7 @@
         </div>
       </NuxtLink>
 
-      <a target="_blank" @click.native="OpenAndCloseMenu" href="https://github.com/gheyth/al-furqan"
+      <a target="_blank" href="https://github.com/gheyth/al-furqan"
         class="flex justify-center items-center w-20 h-20 text-basic-02 transition-all p-1 hover:border hover:border-basic-02 hover:rounded-md">
         <div>
           <div class="flex justify-center items-center">
@@ -82,7 +82,7 @@
         </div>
       </a>
 
-      <a target="_blank" @click.native="OpenAndCloseMenu" href="https://twitter.com/_frs99" class="flex justify-center items-center w-20 h-20 text-basic-02 transition-all p-1 hover:border hover:border-basic-02 hover:rounded-md">
+      <a target="_blank" href="https://twitter.com/_frs99" class="flex justify-center items-center w-20 h-20 text-basic-02 transition-all p-1 hover:border hover:border-basic-02 hover:rounded-md">
         <div>
           <div class="flex justify-center items-center">
             <i class="text-center w-6 h-6 text-2xl fi fi-brands-twitter"></i>

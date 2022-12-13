@@ -6,7 +6,7 @@
       :ayat=info.allayat
       :start=info.startayat
       :end=info.endayat
-      :link = " '/surah' + info.dir "
+      :link = "info.dir "
       :destination = "info.destination"
       :group = "info.group"
     />
@@ -27,7 +27,7 @@
 import SlugHeader from '~/components/blog/SlugHeader.vue';
 export default {
   async asyncData({ $content, params }) {
-    const info = await $content("alfaatiha", params.slug).fetch();
+    const info = await $content("/surah/alfaatiha", params.slug).fetch();
     return { info };
   },
   head() {

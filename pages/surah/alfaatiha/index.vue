@@ -66,7 +66,7 @@ import IntroBlog from '../../../components/blog/intro-blog.vue';
 import InfoSurah from '../../../components/blog/InfoSurah.vue';
   export default {
     async asyncData({ $content }) {
-        const info = await $content("alfaatiha")
+        const info = await $content("/surah/alfaatiha")
             .fetch();
         return {
             info
