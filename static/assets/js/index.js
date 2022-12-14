@@ -47,7 +47,7 @@ function PageSlug(){
     PageJson.content.push(DataJson)
   }
   console.log(PageJson)
-  // console.log(AyaArray)
+  console.log(AyaArray)
 
 
   ////////////////////////// ******* //////////////////////////
@@ -82,6 +82,7 @@ function PageSlug(){
       else { ExplClose() };
     });
   };
+  
   //for copy text
   Copy.forEach(element => {
     element.addEventListener("click", () => {
@@ -122,6 +123,8 @@ function PageSlug(){
         element.button.style.opacity = null;
         //explain
         element.explain.button.style.backgroundColor = "#cca35a";
+        element.explain.button.style.padding = "6px"
+        element.explain.button.style.borderRadius = "6px"
         element.explain.button.style.opacity = null;
 
         //to explain
@@ -139,6 +142,8 @@ function PageSlug(){
         element.button.style.opacity = null;
         //explain
         element.explain.button.style.backgroundColor = null;
+        element.explain.button.style.padding = null
+        element.explain.button.style.borderRadius = null
         element.explain.button.style.opacity = null;
 
         //button aya-aya

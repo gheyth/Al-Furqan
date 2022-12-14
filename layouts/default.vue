@@ -6,7 +6,7 @@
       </main>
       <Footer />
       <div id="loading">
-        <img class="w-52" src="../assets/img/logogheyth.png">
+        <img src="../assets/img/logogheyth.png">
       </div>
   </div>
 </template>
@@ -73,5 +73,13 @@ export default {
     width: 100vw;
     height: 100vh;
     background-color: #94682A;
+  }
+  #loading img {
+    width:200px;
+  }
+  @media ( max-width: 400px){
+    #loading img {
+      width: 30%;
+    }
   }
 </style>
