@@ -1,10 +1,13 @@
 <template>
-  <div>
+  <div class="page">
       <Navbar />
       <main>
         <Nuxt />
       </main>
       <Footer />
+      <div id="loading">
+        <img class="w-52" src="../assets/img/logogheyth.png">
+      </div>
   </div>
 </template>
 <script>
@@ -18,7 +21,26 @@ export default {
   layoutTransition: {
     name: 'layout',
     mode: 'out-in'
-  }
+  },
+  mounted() {
+    function onReady(callback) {
+      var intervalId = window.setInterval(function () {
+        if (document.getElementsByTagName('body')[0] !== undefined) {
+          window.clearInterval(intervalId);
+          callback.call(this);
+        }
+      }, 1000);
+    }
+
+    function setVisible(selector, visible) {
+      document.querySelector(selector).style.display = visible ? 'block' : 'none';
+    }
+
+    onReady(function () {
+      setVisible('.page', true);
+      setVisible('#loading', false);
+    });
+  },
 }
 </script>
 
@@ -38,5 +60,18 @@ export default {
   .layout-enter,
   .layout-leave-active {
     opacity: 0;
+  }
+
+  #loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: #94682A;
   }
 </style>
