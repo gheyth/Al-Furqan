@@ -97,7 +97,7 @@ import InfoSurah from '../../../components/blog/InfoSurah.vue';
     justify-content: center;
   }
   .list-surah li{
-    min-width: 160px;
+    min-width: 165px;
     display: inline-grid;
     padding-right:0;
   }
