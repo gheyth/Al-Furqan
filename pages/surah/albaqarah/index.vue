@@ -4,7 +4,7 @@
       title="الصفحات"
       info="فَإِذَا قَرَأْتَ الْقُرْآنَ فَاسْتَعِذْ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ  (98) (النحل)"
     />
-    <div class="container mx-auto my-0 py-11 w-4/5">
+    <div class="mx-auto my-0 py-11 w-5/6">
       <h1 class="text-center text-basic-02 text-5xl font-black">المحتوى</h1>
 
       <div class="flex justify-end items-center my-0 mt-5 mx-auto">
@@ -90,16 +90,17 @@ import InfoSurah from '../../../components/blog/InfoSurah.vue';
 </script>
 
 <style scoped>
-  .list-surah{
+.list-surah{
     grid-gap: 10px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 162px);
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
   }
   .list-surah li{
-    min-width: 165px;
-    display: inline-grid;
     padding-right:0;
+  }
+  .list-surah li a{
+    width: 175px;
   }
   iframe{
     width: 100% !important;
